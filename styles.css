@@ -17,6 +17,8 @@ body {
   background-size: cover;
   mix-blend-mode: difference;
   overflow: scroll;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .hero {
@@ -55,7 +57,7 @@ input {
 }
 
 footer {
-    color: black;
+    color: white;
     text-align: center;
     padding: 20px 0;
 }
