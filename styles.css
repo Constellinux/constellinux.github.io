@@ -17,18 +17,20 @@ body {
   background-size: cover;
   mix-blend-mode: difference;
   overflow: scroll;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */;
 }
 
+
 .hero {
-    background-size: cover;
-    background-position: center;
     padding: 20px;
     text-align: center;
 }
 
 .hero-content p {
     font-size: 1.5em;
+    background-color: rgba(0,0,0,0.25);
+    padding: 25px;
+    border-radius: 10px;
 }
 
 .hero-content {
