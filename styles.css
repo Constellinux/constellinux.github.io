@@ -37,6 +37,12 @@ body {
     margin: 0;
 }
 
+.main {
+  background-color: rgba(0,0,0,0.25);
+  padding: 25px;
+  border-radius: 10px;
+}
+
 .cta-button {
     background-color: #007BFF;
     color: white;
@@ -105,8 +111,7 @@ img {
 a {
   color: white;
   text-align: center;
-  padding: 4px 15px;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
