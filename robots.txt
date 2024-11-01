@@ -1,1 +1,1 @@
-Sitemap: https://constellinux.github.io/sitemap.txt
+Sitemap: https://constellinux.github.io/sitemap.xml
