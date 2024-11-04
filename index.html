@@ -1,8 +1,73 @@
-<p><a href="/Home">If You Aren't Redirected, Click Here,</a></p>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Constellinux Project is a group of Projects, built around Constello Container and Oskee Network.">
-    <meta name="google-site-verification" content="Pk1JGcZe0XCJRfnpi6yvp9JkVst9QmnmYlGKpSgW_uE" />
+    <title>Constellinux</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/basics.js"></script>
 </head>
+<body>
+    <div id="navbar-placeholder" ></div>
+    <header class="hero">
+        <div class="hero-content">
+            <img src="https://github.com/Constellinux/.github/blob/main/Logos/Normal.PNG?raw=true" alt="Constellinux Promotional Image" style="height: 450px; width: 450px; box-shadow: 5px 5px 5px rgba(0,0,0,0.25);">
+            <h2 style="position: sticky; position: -webkit-sticky;">The Constellinux Project</h2>
+            <h1>“Those who can imagine anything, can create the impossible.”
+               <br> ― Alan Turing</h1>
+        </div>
+    </header>
+    <center>
+    <div class="main" style="width: 90%;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr;">
+            <div>
+                <h1>Constello Container</h1>
+                <p style="width: 50%; font-size: 20px; margin: 0 auto;">Constello is the system that runs <a href="https://github.com/Constellinux/Constello/wiki/CRL-(Constellinux-Runner-Language)">CRL</a>, and therefore Constellinux!.</p>
+                <button type="button" onclick="location.href='/Constello';">Take A Look</button>
+            </div>
+            <div>
+                <h1>Constellinux</h1>
+                <p style="width: 50%; font-size: 20px; margin: 0 auto;">Constellinux is an Operating System, Based on the Constello Container.</p>
+                <button type="button" onclick="bootConstello('/Constellinux/Constellinux/main/')">Open Constellinux</button>
+            </div>
+            <div>
+                <h1>Oskee Network</h1>
+                <p style="width: 50%; font-size: 20px; margin: 0 auto;">Oskee is a not under development at this time, merely a concept, It's an interesting one though.</p>
+            </div>
+        </div>
+    </div>
+    </center>
+    <div id="footer-placeholder" ></div>
+</body>
 <script>
-    window.location.replace("/Home");
+    async function bootConstello(repo) {
+    console.log(repo)
+    let gitrepo = repo
+    let root = 'v0.0.1.html';
+    try {
+        let response = await fetch('https://raw.githubusercontent.com/Constellinux/Constello/main/Constello/versions.json');
+        if (response.ok) {
+            let data = await response.json();
+            if (data.currentversion) {
+                root = data.currentversion;
+                console.log(root)
+            } else {
+                console.warn('currentversion not found in versions.json, using default:', root);
+            }
+        } else {
+            console.error('Error fetching versions.json:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Error fetching the version:', error);
+    }
+    let url = `https://constellinux.github.io/Constello/Constello/${root}?adv=${gitrepo}`;
+    let newWindow = window.open(url, '_blank');
+    if (newWindow) {
+        newWindow.focus();
+    } else {
+        console.error('Failed to open new window');
+    }
+}
 </script>
+</html>
