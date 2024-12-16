@@ -2,8 +2,6 @@ body {
   font-family: Helvetica, sans-serif, Arial;
   margin: 0;
   padding: 0;
-  /*background: rgb(53,59,102);
-  background: linear-gradient(180deg, rgb(30, 38, 101) 0%, rgb(78, 42, 71) 100%);*/
   background-image: url(https://raw.githubusercontent.com/Constellinux/.github/main/Wallpapers/default.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed; 
@@ -15,7 +13,6 @@ body {
   flex-direction: column;
   align-items: cover;
   background-size: cover;
-  mix-blend-mode: difference;
   overflow: scroll;
   overflow-x: hidden; /* Hide horizontal scrollbar */;
 }
